@@ -1,0 +1,91 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.0">
+  <diagram id="hB1WDe-YQj0lXSNrwyJ1" name="Страница-1">
+    <mxGraphModel dx="918" dy="1128" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-1" parent="1" style="html=1;whiteSpace=wrap;" value="Client" vertex="1">
+          <mxGeometry height="50" width="110" x="170" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-2" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="FlyweightFactory" vertex="1">
+          <mxGeometry height="86" width="310" x="70" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-4" parent="OlQ4fSqwQN4dAwfrdZx2-2" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="310" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-5" parent="OlQ4fSqwQN4dAwfrdZx2-2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ &lt;u&gt;getFlyweight(ch: QChar): shared_ptr&amp;lt;Flyweight&amp;gt;&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="310" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-6" parent="OlQ4fSqwQN4dAwfrdZx2-2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ &lt;u&gt;getMaskForChar(ch: QChar): uint64_t&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="- &lt;u&gt;m_cache&lt;/u&gt;" vertex="1">
+          <mxGeometry height="30" width="80" x="440" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-11" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;i&gt;Flyweight&lt;/i&gt;" vertex="1">
+          <mxGeometry height="86" width="570" x="510" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-13" parent="OlQ4fSqwQN4dAwfrdZx2-11" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="570" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-14" parent="OlQ4fSqwQN4dAwfrdZx2-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&lt;i&gt; draw(painter: QPainter*, row: Integer, column: Integer, color: QColor&amp;amp;, width: Integer, height: Integer)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="26" width="570" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-15" parent="OlQ4fSqwQN4dAwfrdZx2-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ &lt;i&gt;getChar(): QChar&lt;/i&gt;" vertex="1">
+          <mxGeometry height="26" width="570" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-16" edge="1" parent="1" source="OlQ4fSqwQN4dAwfrdZx2-17" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.5;entryY=0.997;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="OlQ4fSqwQN4dAwfrdZx2-15" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="795" y="640" as="sourcePoint" />
+            <mxPoint x="790" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-17" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="CharFlyweight" vertex="1">
+          <mxGeometry height="138" width="570" x="510" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-21" parent="OlQ4fSqwQN4dAwfrdZx2-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- m_char: QChar" vertex="1">
+          <mxGeometry height="26" width="570" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-22" parent="OlQ4fSqwQN4dAwfrdZx2-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- m_mask: uint64_t" vertex="1">
+          <mxGeometry height="26" width="570" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-18" parent="OlQ4fSqwQN4dAwfrdZx2-17" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="570" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-19" parent="OlQ4fSqwQN4dAwfrdZx2-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ draw(painter: QPainter*, row: Integer, column: Integer, color: QColor&amp;amp;, width: Integer, height: Integer)" vertex="1">
+          <mxGeometry height="26" width="570" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-20" parent="OlQ4fSqwQN4dAwfrdZx2-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getChar(): QChar" vertex="1">
+          <mxGeometry height="26" width="570" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-34" edge="1" parent="1" source="OlQ4fSqwQN4dAwfrdZx2-14" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="OlQ4fSqwQN4dAwfrdZx2-5" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="490" y="580" as="sourcePoint" />
+            <mxPoint x="520" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-39" edge="1" parent="1" source="OlQ4fSqwQN4dAwfrdZx2-1" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="OlQ4fSqwQN4dAwfrdZx2-22" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="240" y="960" as="sourcePoint" />
+            <mxPoint x="400" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-40" edge="1" parent="1" source="OlQ4fSqwQN4dAwfrdZx2-1" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="OlQ4fSqwQN4dAwfrdZx2-2" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="190" y="810" as="sourcePoint" />
+            <mxPoint x="225" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-41" parent="1" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=left;" value="public std::shared_ptr&amp;lt;Flyweight&amp;gt; FlyweightFactory::getFlyweight(QChar ch)&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;auto it = m_cache.find(ch);&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;if (it == m_cache.end())&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;{&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;auto fly = std::make_shared&amp;lt;CharFlyweight&amp;gt;(ch, getMaskForChar(ch));&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;m_cache[ch] = fly;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;return fly;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;}&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;return it.value();&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="440" x="40" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="OlQ4fSqwQN4dAwfrdZx2-42" edge="1" parent="1" source="OlQ4fSqwQN4dAwfrdZx2-41" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="OlQ4fSqwQN4dAwfrdZx2-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="80" y="700" as="sourcePoint" />
+            <mxPoint x="130" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

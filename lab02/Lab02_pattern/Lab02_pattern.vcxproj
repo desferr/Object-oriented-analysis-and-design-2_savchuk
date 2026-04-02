@@ -101,6 +101,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FlyweightFactory.cpp" />
     <ClCompile Include="TextVisualizer.cpp" />
     <QtRcc Include="MainWindow.qrc" />
     <QtUic Include="MainWindow.ui" />
@@ -115,6 +116,7 @@
   <ItemGroup>
     <ClInclude Include="CharContext.h" />
     <ClInclude Include="CharFlyweight.h" />
+    <ClInclude Include="Flyweight.h" />
     <ClInclude Include="FlyweightFactory.h" />
     <ClInclude Include="TextVisualizer.h" />
   </ItemGroup>

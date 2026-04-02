@@ -1,16 +1,15 @@
 #pragma once
 
 #include <QChar>
-#include <QColor>
-#include <QPainter>
+#include "Flyweight.h"
 
-class CharFlyweight
+class CharFlyweight : public Flyweight
 {
 
 public:
 	CharFlyweight(QChar ch, uint64_t mask = 0) : m_char(ch), m_mask(mask) {}
 	QChar getChar() const { return m_char; }
-	void draw(QPainter* painter, int row, int column, const QColor& color, int width = 8, int height = 8) const
+	void draw(QPainter* painter, int row, int column, const QColor& color, int width = 8, int height = 8) const override
 	{
 		for (int row_iter = 0; row_iter < height; row_iter++)
 		{
