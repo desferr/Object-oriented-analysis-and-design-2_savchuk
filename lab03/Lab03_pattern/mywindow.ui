@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Lab03_pattern</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="readCardsButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>510</y>
+      <width>200</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Считать Карточки</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="readCardsTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>215</x>
+      <y>510</y>
+      <width>575</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="lineWrapMode">
+     <enum>QTextEdit::LineWrapMode::NoWrap</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="deckFrame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>780</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QFrame" name="cardFrame">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>60</y>
+       <width>600</width>
+       <height>300</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+       <stylestrategy>PreferDefault</stylestrategy>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame#cardFrame {
+	background-color: #9a9a9a;
+	border-radius: 20px;
+}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Plain</enum>
+     </property>
+     <widget class="QLabel" name="cardLabel">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>560</width>
+        <height>200</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>22</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="prevCardButton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>270</y>
+        <width>180</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#prevCardButton{
+	background-color: #D3D3D3;
+	border-radius: 0px;
+	border-right: 2px solid black;
+}
+QPushButton#prevCardButton:hover{
+	background-color: #C0C0C0;
+}
+QPushButton#prevCardButton:pressed{
+	background-color: #B6B6B6;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="flipCardButton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>270</y>
+        <width>200</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#flipCardButton{
+	background-color: #D3D3D3;
+	border-radius: 0px;
+}
+QPushButton#flipCardButton:hover{
+	background-color: #C0C0C0;
+}
+QPushButton#flipCardButton:pressed{
+	background-color: #B6B6B6;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="nextCardButton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>270</y>
+        <width>180</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#nextCardButton{
+	background-color: #D3D3D3;
+	border-bottom-right-radius: 0px;
+	border-left: 2px solid black;
+}
+QPushButton#nextCardButton:hover{
+	background-color: #C0C0C0;
+}
+QPushButton#nextCardButton:pressed{
+	background-color: #B6B6B6;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="firstCardButton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>270</y>
+        <width>20</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#firstCardButton{
+	background-color: #D3D3D3;
+	border-bottom-left-radius: 20px;
+	border-right: 2px solid black;
+}
+QPushButton#firstCardButton:hover{
+	background-color: #C0C0C0;
+}
+QPushButton#firstCardButton:pressed{
+	background-color: #B6B6B6;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="lastCardButton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>270</y>
+        <width>20</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#lastCardButton{
+	background-color: #D3D3D3;
+	border-bottom-right-radius: 20px;
+	border-left: 2px solid black;
+}
+QPushButton#lastCardButton:hover{
+	background-color: #C0C0C0;
+}
+QPushButton#lastCardButton:pressed{
+	background-color: #B6B6B6;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cardCountLabel">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>10</y>
+        <width>100</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>0 / 0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="shuffleDeckButton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>100</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#shuffleDeckButton{
+	background-color: #D3D3D3;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 30px;
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+}
+QPushButton#shuffleDeckButton:hover{
+	background-color: #C0C0C0;
+}
+QPushButton#shuffleDeckButton:pressed{
+	background-color: #B6B6B6;
+}</string>
+      </property>
+      <property name="text">
+       <string>Перемешать</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="changeModeButton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>0</y>
+        <width>120</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#changeModeButton{
+	background-color: #D3D3D3;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 30px;
+	border-bottom: 2px solid black;
+	border-left: 2px solid black;
+}
+QPushButton#changeModeButton:hover{
+	background-color: #C0C0C0;
+}
+QPushButton#changeModeButton:pressed{
+	background-color: #B6B6B6;
+}</string>
+      </property>
+      <property name="text">
+       <string>Просмотр</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="editCardButton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>75</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#editCardButton{
+	background-color: #D3D3D3;
+	border-top-left-radius: 20px;
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+}
+QPushButton#editCardButton:hover{
+	background-color: #C0C0C0;
+}
+QPushButton#editCardButton:pressed{
+	background-color: #B6B6B6;
+}</string>
+      </property>
+      <property name="text">
+       <string>Изменить</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="addCardButton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>75</x>
+        <y>0</y>
+        <width>75</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#addCardButton{
+	background-color: #D3D3D3;
+	border-radius: 0px;
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+}
+QPushButton#addCardButton:hover{
+	background-color: #C0C0C0;
+}
+QPushButton#addCardButton:pressed{
+	background-color: #B6B6B6;
+}</string>
+      </property>
+      <property name="text">
+       <string>Добавить</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="deleteCardButton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>0</y>
+        <width>75</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#deleteCardButton{
+	background-color: #D3D3D3;
+	border-bottom-right-radius: 30px;
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+}
+QPushButton#deleteCardButton:hover{
+	background-color: #C0C0C0;
+}
+QPushButton#deleteCardButton:pressed{
+	background-color: #B6B6B6;
+}</string>
+      </property>
+      <property name="text">
+       <string>Удалить</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="saveCardsButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>465</y>
+      <width>200</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Сохранить Карточки</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="saveCardsTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>215</x>
+      <y>465</y>
+      <width>575</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="lineWrapMode">
+     <enum>QTextEdit::LineWrapMode::NoWrap</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

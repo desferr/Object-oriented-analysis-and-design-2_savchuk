@@ -1,0 +1,39 @@
+# Bytecode и кэш Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+
+# Виртуальное окружение
+venv/
+env/
+ENV/
+.venv
+
+# Файлы IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Файлы сборки PyInstaller
+*.spec
+build/
+dist/
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.bak
+
+# Файлы проекта PyCharm
+.idea/
+*.iml
+
+# Файлы отчётов о покрытии, профилирования и т.п.
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.pytest_cache/
